@@ -23,6 +23,7 @@
             background: #fff;
             color: #333;
             line-height: 1.6;
+            overflow-x: hidden; /* Evita rolagem horizontal */
         }
 
         /* Navbar */
@@ -51,20 +52,34 @@
         }
 
         .navbar-logo img {
-            max-width: 100px;
+            max-width: 80px; /* Reduzido para mobile */
             height: auto;
-            margin-bottom: 10px; /* Espaço entre a logo e o título */
+            margin-bottom: 8px;
         }
 
         .navbar a {
             color: #333;
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 16px;
+            margin: 0 10px;
+            font-size: 1rem;
         }
 
         .navbar a:hover {
             color: #666;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #333;
         }
 
         /* Hero Section */
@@ -105,38 +120,39 @@
 
         .hero-content {
             background: rgba(255, 255, 255, 0.8);
-            padding: 30px;
+            padding: 2rem;
             border-radius: 8px;
-            max-width: 80%;
+            max-width: 90%;
             z-index: 1;
         }
 
         .hero h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
             color: #333;
         }
 
         .hero h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
             color: #333;
         }
 
         .hero p {
-            font-size: 20px;
+            font-size: 1.2rem;
             color: #666;
-            margin-bottom: 20px;
+            margin-bottom: 1rem;
         }
 
         .btn {
             display: inline-block;
-            padding: 10px 20px;
+            padding: 0.6rem 1.2rem;
             background: #333;
             color: #fff;
             text-decoration: none;
             border-radius: 4px;
             transition: background 0.3s;
+            font-size: 1rem;
         }
 
         .btn:hover {
@@ -145,30 +161,30 @@
 
         /* Sections */
         .section {
-            padding: 60px 20px;
+            padding: 3rem 1rem;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .section h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
+            font-size: 2rem;
+            margin-bottom: 1rem;
             text-align: center;
             color: #333;
         }
 
-        /* Agenda with Fixed Display - Improved Visual */
+        /* Agenda */
         .agenda-list {
             display: flex;
             flex-direction: column;
-            gap: 20px;
-            max-width: 600px;
+            gap: 1rem;
+            max-width: 100%;
             margin: 0 auto;
         }
 
         .agenda-item {
             background: #f9f9f9;
-            padding: 20px;
+            padding: 1rem;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             position: relative;
@@ -182,79 +198,78 @@
             left: 0;
             width: 5px;
             height: 100%;
-            background: #333; /* Accent color for visual appeal */
+            background: #333;
         }
 
         .agenda-item h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
             color: #333;
         }
 
         .agenda-item p {
-            font-size: 16px;
+            font-size: 1rem;
             color: #666;
-            margin-bottom: 5px;
-            position: relative;
-            padding-left: 25px;
+            margin-bottom: 0.3rem;
+            padding-left: 1.5rem;
         }
 
         .agenda-item p::before {
-            content: '\2022'; /* Bullet point for visual enhancement */
+            content: '\2022';
             position: absolute;
             left: 0;
             color: #333;
-            font-size: 18px;
+            font-size: 1.2rem;
         }
 
         /* Empresas */
         .empresas-logo {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 1rem;
         }
 
         .empresas-logo img {
-            max-width: 200px;
+            max-width: 150px;
             height: auto;
         }
 
         .empresas-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
         }
 
         .empresa-card {
             background: #f9f9f9;
-            padding: 20px;
+            padding: 1rem;
             border-radius: 8px;
             text-align: center;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
-            min-height: 200px; /* Ensure uniform height */
+            min-height: auto;
         }
 
         .empresa-card h3 {
-            font-size: 22px;
-            margin-bottom: 10px;
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
             color: #333;
         }
 
         .empresa-card p {
-            font-size: 16px;
+            font-size: 0.9rem;
             color: #666;
-            flex-grow: 1; /* Ensure description fills space uniformly */
+            flex-grow: 1;
         }
 
         .empresa-card .instagram-link {
-            margin-top: 10px;
+            margin-top: 0.5rem;
         }
 
         .empresa-card .instagram-link img {
-            width: 30px;
-            height: 30px;
+            width: 24px;
+            height: 24px;
             transition: opacity 0.3s;
         }
 
@@ -265,31 +280,33 @@
         /* Arquiteta */
         .arquiteta {
             display: flex;
-            gap: 20px;
+            gap: 1rem;
             align-items: center;
         }
 
         .arquiteta img {
-            max-width: 300px;
+            max-width: 100%;
+            width: 250px;
             border-radius: 8px;
         }
 
         /* Galeria */
         .galeria-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 0.5rem;
             text-align: center;
         }
 
         .galeria-grid a {
             display: inline-block;
-            padding: 10px 20px;
+            padding: 0.5rem 1rem;
             background: #333;
             color: #fff;
             text-decoration: none;
             border-radius: 4px;
             transition: background 0.3s;
+            font-size: 0.9rem;
         }
 
         .galeria-grid a:hover {
@@ -322,32 +339,33 @@
         /* Cadastro */
         .cadastro {
             background: #f9f9f9;
-            padding: 40px;
+            padding: 2rem;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            max-width: 500px;
+            max-width: 100%;
             margin: 0 auto;
         }
 
         .cadastro form {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 1rem;
         }
 
         .cadastro label {
             font-weight: bold;
             color: #333;
-            font-size: 16px;
-            margin-bottom: 5px;
+            font-size: 0.9rem;
+            margin-bottom: 0.3rem;
         }
 
         .cadastro input, .cadastro textarea {
-            padding: 12px;
+            padding: 0.8rem;
             border: 1px solid #ccc;
             border-radius: 6px;
-            font-size: 16px;
+            font-size: 0.9rem;
             transition: border-color 0.3s, box-shadow 0.3s;
+            width: 100%;
         }
 
         .cadastro input:focus, .cadastro textarea:focus {
@@ -357,17 +375,17 @@
         }
 
         .cadastro textarea {
-            min-height: 100px;
+            min-height: 80px;
             resize: vertical;
         }
 
         .cadastro button {
-            padding: 12px;
+            padding: 0.8rem;
             background: #333;
             color: #fff;
             border: none;
             border-radius: 6px;
-            font-size: 16px;
+            font-size: 0.9rem;
             cursor: pointer;
             transition: background 0.3s, transform 0.2s;
         }
@@ -380,59 +398,251 @@
         /* Footer */
         .footer {
             background: #f9f9f9;
-            padding: 20px;
+            padding: 1.5rem;
             text-align: center;
+        }
+
+        .footer p {
+            font-size: 0.9rem;
         }
 
         .footer a {
             color: #333;
-            margin: 0 10px;
+            margin: 0 0.5rem;
             text-decoration: none;
+            font-size: 0.9rem;
         }
 
         .footer a:hover {
             color: #666;
         }
 
-        /* Responsividade */
+        /* Media Queries para Responsividade */
         @media (max-width: 768px) {
+            /* Navbar */
             .navbar .container {
                 flex-direction: column;
-                gap: 10px;
+                gap: 0.5rem;
             }
 
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                padding: 1rem 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                margin: 0.5rem 0;
+                font-size: 1rem;
+            }
+
+            .menu-toggle {
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+
+            .navbar-logo img {
+                max-width: 60px;
+            }
+
+            .navbar-logo h1 {
+                font-size: 1.5rem;
+            }
+
+            /* Hero */
             .hero h1 {
-                font-size: 32px;
+                font-size: 1.8rem;
             }
 
             .hero h3 {
-                font-size: 20px;
+                font-size: 1.2rem;
             }
 
             .hero p {
-                font-size: 16px;
+                font-size: 1rem;
             }
 
             .hero-content {
-                padding: 20px;
-                max-width: 90%;
+                padding: 1rem;
+                max-width: 95%;
             }
 
+            .btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            /* Sections */
+            .section {
+                padding: 2rem 0.5rem;
+            }
+
+            .section h2 {
+                font-size: 1.5rem;
+            }
+
+            /* Arquiteta */
             .arquiteta {
                 flex-direction: column;
                 text-align: center;
             }
 
+            .arquiteta img {
+                width: 100%;
+                max-width: 200px;
+            }
+
+            /* Agenda */
             .agenda-list {
                 max-width: 100%;
             }
 
-            .cadastro {
-                padding: 20px;
+            .agenda-item h3 {
+                font-size: 1.2rem;
             }
 
-            .empresa-card {
-                min-height: auto; /* Adjust for mobile */
+            .agenda-item p {
+                font-size: 0.9rem;
+            }
+
+            /* Empresas */
+            .empresas-logo img {
+                max-width: 120px;
+            }
+
+            .empresas-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .empresa-card h3 {
+                font-size: 1.2rem;
+            }
+
+            .empresa-card p {
+                font-size: 0.85rem;
+            }
+
+            .empresa-card .instagram-link img {
+                width: 20px;
+                height: 20px;
+            }
+
+            /* Galeria */
+            .galeria-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .galeria-grid a {
+                font-size: 0.85rem;
+            }
+
+            /* Cadastro */
+            .cadastro {
+                padding: 1rem;
+                max-width: 95%;
+            }
+
+            .cadastro label {
+                font-size: 0.85rem;
+            }
+
+            .cadastro input, .cadastro textarea {
+                font-size: 0.85rem;
+                padding: 0.6rem;
+            }
+
+            .cadastro button {
+                font-size: 0.85rem;
+                padding: 0.6rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar-logo img {
+                max-width: 50px;
+            }
+
+            .navbar-logo h1 {
+                font-size: 1.2rem;
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .hero h3 {
+                font-size: 1rem;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+            }
+
+            .btn {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.8rem;
+            }
+
+            .section h2 {
+                font-size: 1.2rem;
+            }
+
+            .arquiteta img {
+                max-width: 150px;
+            }
+
+            .agenda-item h3 {
+                font-size: 1rem;
+            }
+
+            .agenda-item p {
+                font-size: 0.8rem;
+            }
+
+            .empresa-card h3 {
+                font-size: 1rem;
+            }
+
+            .empresa-card p {
+                font-size: 0.8rem;
+            }
+
+            .footer p, .footer a {
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero h3 {
+                font-size: 1.3rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section h2 {
+                font-size: 1.8rem;
+            }
+
+            .empresas-grid {
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            }
+
+            .arquiteta img {
+                max-width: 200px;
             }
         }
     </style>
@@ -442,10 +652,10 @@
     <nav class="navbar">
         <div class="container">
             <div class="navbar-logo">
-                
                 <h1>Entremares</h1>
             </div>
-            <div>
+            <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+            <div class="nav-links">
                 <a href="#agenda">Agenda</a>
                 <a href="#empresas">Empresas</a>
                 <a href="#arquiteta">Arquiteta</a>
@@ -633,6 +843,15 @@
         document.querySelector('form').addEventListener('submit', (e) => {
             e.preventDefault();
             alert('Formulário enviado com sucesso!');
+        });
+
+        // Menu Hambúrguer
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
         });
     </script>
 </body>
