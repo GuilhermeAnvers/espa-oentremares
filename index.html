@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entremares - Morar Mais Rio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', 'Lora', serif;
+        }
+
+        body {
+            background: #fff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .navbar-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .navbar-logo img {
+            max-width: 100px;
+            height: auto;
+            margin-bottom: 10px; /* Espaço entre a logo e o título */
+        }
+
+        .navbar a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+
+        .navbar a:hover {
+            color: #666;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .hero .slideshow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .hero .slideshow img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .hero .slideshow img.active {
+            opacity: 1;
+        }
+
+        .hero-content {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 80%;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .hero h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #555;
+        }
+
+        /* Sections */
+        .section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
+
+        /* Agenda with Fixed Display - Improved Visual */
+        .agenda-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .agenda-item {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .agenda-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: #333; /* Accent color for visual appeal */
+        }
+
+        .agenda-item h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .agenda-item p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 5px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .agenda-item p::before {
+            content: '\2022'; /* Bullet point for visual enhancement */
+            position: absolute;
+            left: 0;
+            color: #333;
+            font-size: 18px;
+        }
+
+        /* Empresas */
+        .empresas-logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .empresas-logo img {
+            max-width: 200px;
+            height: auto;
+        }
+
+        .empresas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .empresa-card {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            min-height: 200px; /* Ensure uniform height */
+        }
+
+        .empresa-card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .empresa-card p {
+            font-size: 16px;
+            color: #666;
+            flex-grow: 1; /* Ensure description fills space uniformly */
+        }
+
+        .empresa-card .instagram-link {
+            margin-top: 10px;
+        }
+
+        .empresa-card .instagram-link img {
+            width: 30px;
+            height: 30px;
+            transition: opacity 0.3s;
+        }
+
+        .empresa-card .instagram-link img:hover {
+            opacity: 0.7;
+        }
+
+        /* Arquiteta */
+        .arquiteta {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .arquiteta img {
+            max-width: 300px;
+            border-radius: 8px;
+        }
+
+        /* Galeria */
+        .galeria-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            text-align: center;
+        }
+
+        .galeria-grid a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        .galeria-grid a:hover {
+            background: #555;
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        /* Cadastro */
+        .cadastro {
+            background: #f9f9f9;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .cadastro form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .cadastro label {
+            font-weight: bold;
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .cadastro input, .cadastro textarea {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .cadastro input:focus, .cadastro textarea:focus {
+            outline: none;
+            border-color: #555;
+            box-shadow: 0 0 5px rgba(85, 85, 85, 0.3);
+        }
+
+        .cadastro textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .cadastro button {
+            padding: 12px;
+            background: #333;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .cadastro button:hover {
+            background: #555;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .footer {
+            background: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #333;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: #666;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .navbar .container {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero h3 {
+                font-size: 20px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .hero-content {
+                padding: 20px;
+                max-width: 90%;
+            }
+
+            .arquiteta {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .agenda-list {
+                max-width: 100%;
+            }
+
+            .cadastro {
+                padding: 20px;
+            }
+
+            .empresa-card {
+                min-height: auto; /* Adjust for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-logo">
+                
+                <h1>Entremares</h1>
+            </div>
+            <div>
+                <a href="#agenda">Agenda</a>
+                <a href="#empresas">Empresas</a>
+                <a href="#arquiteta">Arquiteta</a>
+                <a href="#galeria">Suas Fotos</a>
+                <a href="#cadastro">Cadastro</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="slideshow">
+            <img src="entremaresfoto1.jpg" class="active" alt="Ambiente Sofisticado">
+            <img src="espaçoentremares2.jpg" alt="Decoração Acessível">
+            <img src="espaçoentremares3.jpg" alt="Sustentabilidade">
+            <img src="espaçoentremares4.jpg" alt="Recanto de Paz">
+        </div>
+        <div class="hero-content">
+            <h1>Espaço Entremares</h1>
+            <h3>Morar Mais 2025</h3>
+            <p>Este espaço nasceu da colaboração de seis empresas apaixonadas por design, inovação e experiências. Cada uma trouxe sua expertise para transformar o ambiente em um convite aos sentidos.</p>
+            <a href="#cadastro" class="btn">Inscreva-se Agora</a>
+        </div>
+    </section>
+
+    <!-- Arquiteta -->
+    <section id="arquiteta" class="section">
+        <h2>Nossa Arquiteta</h2>
+        <div class="arquiteta">
+            <img src="shaysecaf1.png" alt="Shay Secaf">
+            <div>
+                <h3>Shay Secaf</h3>
+                <p>A arquiteta Shayanne Secaf é uma profissional apaixonada por criar ambientes que vão além da estética, buscando proporcionar experiências sensoriais e emocionais aos seus clientes. Com um portfólio diversificado, ela atua tanto em projetos residenciais quanto comerciais, sempre com o objetivo de transformar espaços em lugares especiais e acolhedores.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Empresas -->
+    <section id="empresas" class="section">
+        <div class="empresas-logo">
+        </div>
+        <h2>6 Marcas, um só propósito: Criar um espaço inesquecível na Morar Mais</h2>
+        <div class="empresas-grid">
+            <div class="empresa-card">
+                <h3>Almo Rael</h3>
+                <p>Almo Rael é uma empresa com mais de 20 anos de mercado, especialista em telas em LED. Atua em todas as etapas do projeto, da escolha do modelo à instalação e suporte pós-venda, garantindo qualidade e atendimento especializado.</p>
+                <a href="https://www.instagram.com/almo_rael" class="instagram-link">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Almo Rael">
+                </a>
+            </div>
+            <div class="empresa-card">
+                <h3>Coletivo Jardim Secreto</h3>
+                <p>Coletivo Jardim Secreto é um grupo dedicado a paisagismo, oferecendo execução, manutenção de jardins e consultorias personalizadas. Cria espaços verdes únicos que aliam estética, funcionalidade e bem-estar.</p>
+                <a href="https://www.instagram.com/coletivo_jardim_secreto" class="instagram-link">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Coletivo Jardim Secreto">
+                </a>
+            </div>
+            <div class="empresa-card">
+                <h3>Espaço Varandas</h3>
+                <p>Espaço Varandas cria projetos exclusivos de mobiliário para áreas externas, utilizando cordas náuticas, fibras sintéticas e alumínio de alta qualidade. A empresa transforma sonhos em realidade, oferecendo refúgios perfeitos para aproveitar ao máximo cada espaço.</p>
+                <a href="https://www.instagram.com/espaco_varandas" class="instagram-link">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Espaço Varandas">
+                </a>
+            </div>
+            <div class="empresa-card">
+                <h3>iGUi Conceito Zona Sul</h3>
+                <p>iGUi Conceito Zona Sul oferece piscinas de alto padrão exclusivas no Rio de Janeiro, unindo design, tecnologia e sofisticação. A empresa atende diretamente no imóvel do cliente, proporcionando uma experiência personalizada do início ao fim.</p>
+                <a href="https://www.instagram.com/igui_conceito_zona_sul" class="instagram-link">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram iGUi Conceito Zona Sul">
+                </a>
+            </div>
+            <div class="empresa-card">
+                <h3>Solebrezza</h3>
+                <p>Sole Brezza oferece ombrelones de alta qualidade que unem funcionalidade, sofisticação e design suíço. Seus produtos são reconhecidos por precisão, inovação e durabilidade, garantindo ambientes externos elegantes e confortáveis, tanto residenciais quanto comerciais.</p>
+                <a href="https://www.instagram.com/solebrezza" class="instagram-link">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Solebrezza">
+                </a>
+            </div>
+            <div class="empresa-card">
+                <h3>Toldos Dias</h3>
+                <p>Toldos Dias oferece toldos e coberturas de alto padrão, combinando design, conforto e proteção. Com mais de 75 anos de experiência, entrega soluções exclusivas e sob medida para residências, comércios e empresas.</p>
+                <a href="https://www.instagram.com/toldos_dias" class="instagram-link">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Toldos Dias">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agenda with Fixed Display -->
+    <section id="agenda" class="section">
+        <h2>Agenda de Eventos</h2>
+        <div class="agenda-list">
+            <div class="agenda-item">
+                <h3>Mostra de Decoração - Rio de Janeiro</h3>
+                <p><strong>Data:</strong> 15/10/2025 - 24/11/2025</p>
+                <p><strong>Horário:</strong> 10:00 - 20:00</p>
+                <p><strong>Local:</strong> Centro de Convenções, Leblon</p>
+            </div>
+            <div class="agenda-item">
+                <h3>Workshop de Sustentabilidade</h3>
+                <p><strong>Data:</strong> 20/10/2025</p>
+                <p><strong>Horário:</strong> 14:00</p>
+                <p><strong>Local:</strong> Sala de Eventos Morar Mais</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria -->
+    <section id="galeria" class="section">
+        <h2>Veja Suas Fotos Aqui</h2>
+        <div class="galeria-grid">
+            <a href="https://www.google.com">Drive de fotos</a>
+        </div>
+        <div class="lightbox">
+            <img src="" alt="Lightbox Image">
+        </div>
+    </section>
+
+    <!-- Cadastro -->
+    <section id="cadastro" class="section">
+        <h2>Cadastre-se aqui</h2>
+        <div class="cadastro">
+            <form>
+                <label for="nome">Nome Completo</label>
+                <input id="nome" type="text" placeholder="Digite seu nome" required>
+                <label for="email">E-mail</label>
+                <input id="email" type="email" placeholder="Digite seu e-mail" required>
+                <label for="telefone">Telefone</label>
+                <input id="telefone" type="tel" placeholder="Digite seu telefone" required>
+                <label for="instagram">Instagram</label>
+                <input id="instagram" type="text" placeholder="Digite seu Instagram (ex.: @seu_usuario)">
+                <label for="profissao">Profissão</label>
+                <input id="profissao" type="text" placeholder="Digite sua profissão">
+                <label for="mensagem">Mensagem (opcional)</label>
+                <textarea id="mensagem" placeholder="Escreva sua mensagem"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Entremares. Todos os direitos reservados.</p>
+        <p>Av. Ataulfo de Paiva, 135 – sala 1102 – Leblon, Rio de Janeiro – RJ, 22440-032</p>
+        <div>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+        </div>
+    </footer>
+
+    <script>
+        // Slideshow
+        const slides = document.querySelectorAll('.slideshow img');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+        }
+
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }, 5000);
+
+        // Lightbox
+        const galleryImages = document.querySelectorAll('.galeria-grid img');
+        const lightbox = document.querySelector('.lightbox');
+        const lightboxImage = lightbox.querySelector('img');
+
+        galleryImages.forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImage.src = img.src;
+                lightbox.classList.add('active');
+            });
+        });
+
+        lightbox.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+        });
+
+        // Form Submission (simulado)
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Formulário enviado com sucesso!');
+        });
+    </script>
+</body>
+</html>
