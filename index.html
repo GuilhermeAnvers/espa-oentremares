@@ -23,7 +23,7 @@
             background: #fff;
             color: #333;
             line-height: 1.6;
-            overflow-x: hidden; /* Evita rolagem horizontal */
+            overflow-x: hidden;
         }
 
         /* Navbar */
@@ -52,7 +52,7 @@
         }
 
         .navbar-logo img {
-            max-width: 80px; /* Reduzido para mobile */
+            max-width: 80px;
             height: auto;
             margin-bottom: 8px;
         }
@@ -171,6 +171,15 @@
             margin-bottom: 1rem;
             text-align: center;
             color: #333;
+        }
+
+        /* Sobre Nós */
+        .sobre-nos p {
+            font-size: 1rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
         }
 
         /* Agenda */
@@ -395,6 +404,25 @@
             transform: translateY(-2px);
         }
 
+        /* Mapa */
+        .mapa {
+            text-align: center;
+        }
+
+        .mapa p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .mapa iframe {
+            width: 100%;
+            height: 400px;
+            border: 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
         /* Footer */
         .footer {
             background: #f9f9f9;
@@ -489,6 +517,11 @@
                 font-size: 1.5rem;
             }
 
+            /* Sobre Nós */
+            .sobre-nos p {
+                font-size: 0.9rem;
+            }
+
             /* Arquiteta */
             .arquiteta {
                 flex-direction: column;
@@ -563,6 +596,11 @@
                 font-size: 0.85rem;
                 padding: 0.6rem;
             }
+
+            /* Mapa */
+            .mapa iframe {
+                height: 300px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -595,6 +633,10 @@
                 font-size: 1.2rem;
             }
 
+            .sobre-nos p {
+                font-size: 0.8rem;
+            }
+
             .arquiteta img {
                 max-width: 150px;
             }
@@ -613,6 +655,14 @@
 
             .empresa-card p {
                 font-size: 0.8rem;
+            }
+
+            .mapa p {
+                font-size: 0.8rem;
+            }
+
+            .mapa iframe {
+                height: 250px;
             }
 
             .footer p, .footer a {
@@ -637,12 +687,20 @@
                 font-size: 1.8rem;
             }
 
+            .sobre-nos p {
+                font-size: 0.95rem;
+            }
+
             .empresas-grid {
                 grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             }
 
             .arquiteta img {
                 max-width: 200px;
+            }
+
+            .mapa iframe {
+                height: 350px;
             }
         }
     </style>
@@ -658,6 +716,7 @@
             <div class="nav-links">
                 <a href="#agenda">Agenda</a>
                 <a href="#empresas">Empresas</a>
+                <a href="#sobre-nos">Sobre Nós</a>
                 <a href="#arquiteta">Arquiteta</a>
                 <a href="#galeria">Suas Fotos</a>
                 <a href="#cadastro">Cadastro</a>
@@ -681,6 +740,14 @@
         </div>
     </section>
 
+    
+    <!-- Sobre Nós -->
+    <section id="sobre-nos" class="section sobre-nos">
+        <h2>Sobre Nós</h2>
+        <p>O Espaço Entremares é um projeto colaborativo que une inovação, design e sustentabilidade para criar ambientes únicos na Morar Mais 2025. Nossa missão é transformar espaços em experiências memoráveis, combinando a expertise de sete empresas líderes no mercado com a visão criativa da arquiteta Shayanne Secaf. Inspirados pela conexão entre estética e funcionalidade, buscamos proporcionar momentos de bem-estar e inspiração para todos que visitam nosso espaço.</p>
+    </section>
+
+
     <!-- Arquiteta -->
     <section id="arquiteta" class="section">
         <h2>Nossa Arquiteta</h2>
@@ -693,37 +760,38 @@
         </div>
     </section>
 
+    
     <!-- Empresas -->
     <section id="empresas" class="section">
         <div class="empresas-logo">
         </div>
-        <h2>6 Marcas, um só propósito: Criar um espaço inesquecível na Morar Mais</h2>
+        <h2>7 Marcas, um só propósito: Criar um espaço inesquecível na Morar Mais</h2>
         <div class="empresas-grid">
             <div class="empresa-card">
                 <h3>Almo Rael</h3>
                 <p>Almo Rael é uma empresa com mais de 20 anos de mercado, especialista em telas em LED. Atua em todas as etapas do projeto, da escolha do modelo à instalação e suporte pós-venda, garantindo qualidade e atendimento especializado.</p>
-                <a href="https://www.instagram.com/almo_rael" class="instagram-link">
+                <a href="https://www.instagram.com/almorael" class="instagram-link">
                     <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Almo Rael">
                 </a>
             </div>
             <div class="empresa-card">
                 <h3>Coletivo Jardim Secreto</h3>
                 <p>Coletivo Jardim Secreto é um grupo dedicado a paisagismo, oferecendo execução, manutenção de jardins e consultorias personalizadas. Cria espaços verdes únicos que aliam estética, funcionalidade e bem-estar.</p>
-                <a href="https://www.instagram.com/coletivo_jardim_secreto" class="instagram-link">
+                <a href="https://www.instagram.com/coletivojardimsecreto" class="instagram-link">
                     <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Coletivo Jardim Secreto">
                 </a>
             </div>
             <div class="empresa-card">
                 <h3>Espaço Varandas</h3>
                 <p>Espaço Varandas cria projetos exclusivos de mobiliário para áreas externas, utilizando cordas náuticas, fibras sintéticas e alumínio de alta qualidade. A empresa transforma sonhos em realidade, oferecendo refúgios perfeitos para aproveitar ao máximo cada espaço.</p>
-                <a href="https://www.instagram.com/espaco_varandas" class="instagram-link">
+                <a href="https://www.instagram.com/espacovarandasmoveis" class="instagram-link">
                     <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Espaço Varandas">
                 </a>
             </div>
             <div class="empresa-card">
                 <h3>iGUi Conceito Zona Sul</h3>
                 <p>iGUi Conceito Zona Sul oferece piscinas de alto padrão exclusivas no Rio de Janeiro, unindo design, tecnologia e sofisticação. A empresa atende diretamente no imóvel do cliente, proporcionando uma experiência personalizada do início ao fim.</p>
-                <a href="https://www.instagram.com/igui_conceito_zona_sul" class="instagram-link">
+                <a href="https://www.instagram.com/iguiconceitozona_sul" class="instagram-link">
                     <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram iGUi Conceito Zona Sul">
                 </a>
             </div>
@@ -737,28 +805,29 @@
             <div class="empresa-card">
                 <h3>Toldos Dias</h3>
                 <p>Toldos Dias oferece toldos e coberturas de alto padrão, combinando design, conforto e proteção. Com mais de 75 anos de experiência, entrega soluções exclusivas e sob medida para residências, comércios e empresas.</p>
-                <a href="https://www.instagram.com/toldos_dias" class="instagram-link">
+                <a href="https://www.instagram.com/toldosdias" class="instagram-link">
                     <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Toldos Dias">
+                </a>
+            </div>
+            <div class="empresa-card">
+                <h3>Terralar</h3>
+                <p>Terralar Freguesia é uma loja de materiais de construção com 10 anos de tradição, oferecendo produtos para o lar e entrega em todo o Rio de Janeiro.</p>
+                <a href="https://www.instagram.com/terralarfreguesia" class="instagram-link">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Terralar">
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Agenda with Fixed Display -->
+    <!-- Agenda -->
     <section id="agenda" class="section">
         <h2>Agenda de Eventos</h2>
         <div class="agenda-list">
             <div class="agenda-item">
-                <h3>Mostra de Decoração - Rio de Janeiro</h3>
-                <p><strong>Data:</strong> 15/10/2025 - 24/11/2025</p>
+                <h3>Aula de Yoga by Verão Tintas e Suvenil - Morar Mais Rio</h3>
+                <p><strong>Data:</strong> 01/10/2025</p>
                 <p><strong>Horário:</strong> 10:00 - 20:00</p>
                 <p><strong>Local:</strong> Centro de Convenções, Leblon</p>
-            </div>
-            <div class="agenda-item">
-                <h3>Workshop de Sustentabilidade</h3>
-                <p><strong>Data:</strong> 20/10/2025</p>
-                <p><strong>Horário:</strong> 14:00</p>
-                <p><strong>Local:</strong> Sala de Eventos Morar Mais</p>
             </div>
         </div>
     </section>
@@ -796,14 +865,18 @@
         </div>
     </section>
 
+    <!-- Mapa -->
+    <section id="mapa" class="section mapa">
+        <h2>Onde Nos Encontrar</h2>
+        <p>R. Presciliano da Silva, 188 Parte - Joá, Rio de Janeiro - RJ, 22611-130</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.938841013231!2d-43.27542942306651!3d-22.953148837947315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bd9e4b6c7b6f7%3A0xbec6f5f2a6b7f2c0!2sR.%20Presciliano%20da%20Silva%2C%20188%20-%20Jo%C3%A1%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2022611-130%2C%20Brazil!5e0!3m2!1sen!2sus!4v1696451234567" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <p>&copy; 2025 Entremares. Todos os direitos reservados.</p>
-        <p>Av. Ataulfo de Paiva, 135 – sala 1102 – Leblon, Rio de Janeiro – RJ, 22440-032</p>
+        <p>R. Presciliano da Silva, 188 Parte - Joá, Rio de Janeiro - RJ, 22611-130</p>
         <div>
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-            <a href="#">LinkedIn</a>
         </div>
     </footer>
 
