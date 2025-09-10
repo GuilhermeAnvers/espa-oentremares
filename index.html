@@ -14,18 +14,15 @@
             box-sizing: border-box;
             font-family: 'Arial', sans-serif;
         }
-
         h1, h2, h3, h4, h5 {
             font-family: 'Playfair Display', 'Lora', serif;
         }
-
         body {
             background: #fff;
             color: #333;
             line-height: 1.6;
             overflow-x: hidden;
         }
-
         /* Navbar */
         .navbar {
             position: fixed;
@@ -35,7 +32,6 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             z-index: 1000;
         }
-
         .navbar .container {
             display: flex;
             justify-content: space-between;
@@ -44,35 +40,29 @@
             max-width: 1200px;
             margin: 0 auto;
         }
-
         .navbar-logo {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-
         .navbar-logo img {
             max-width: 80px;
             height: auto;
             margin-bottom: 8px;
         }
-
         .navbar a {
             color: #333;
             text-decoration: none;
             margin: 0 10px;
             font-size: 1rem;
         }
-
         .navbar a:hover {
             color: #666;
         }
-
         .nav-links {
             display: flex;
             align-items: center;
         }
-
         .menu-toggle {
             display: none;
             font-size: 1.5rem;
@@ -81,7 +71,6 @@
             cursor: pointer;
             color: #333;
         }
-
         /* Hero Section */
         .hero {
             height: 100vh;
@@ -93,7 +82,6 @@
             overflow: hidden;
             width: 100%;
         }
-
         .hero .slideshow {
             position: absolute;
             top: 0;
@@ -102,7 +90,6 @@
             height: 100%;
             z-index: -1;
         }
-
         .hero .slideshow img {
             width: 100%;
             height: 100%;
@@ -113,11 +100,9 @@
             opacity: 0;
             transition: opacity 1s ease-in-out;
         }
-
         .hero .slideshow img.active {
             opacity: 1;
         }
-
         .hero-content {
             background: rgba(255, 255, 255, 0.8);
             padding: 2rem;
@@ -125,25 +110,21 @@
             max-width: 90%;
             z-index: 1;
         }
-
         .hero h1 {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
             color: #333;
         }
-
         .hero h3 {
             font-size: 1.5rem;
             margin-bottom: 0.5rem;
             color: #333;
         }
-
         .hero p {
             font-size: 1.2rem;
             color: #666;
             margin-bottom: 1rem;
         }
-
         .btn {
             display: inline-block;
             padding: 0.6rem 1.2rem;
@@ -154,25 +135,21 @@
             transition: background 0.3s;
             font-size: 1rem;
         }
-
         .btn:hover {
             background: #555;
         }
-
         /* Sections */
         .section {
             padding: 3rem 1rem;
             max-width: 1200px;
             margin: 0 auto;
         }
-
         .section h2 {
             font-size: 2rem;
             margin-bottom: 1rem;
             text-align: center;
             color: #333;
         }
-
         /* Sobre Nós */
         .sobre-nos p {
             font-size: 1.1rem;
@@ -181,7 +158,6 @@
             margin: 0 auto;
             text-align: center;
         }
-
         /* Agenda */
         .agenda-list {
             display: flex;
@@ -190,7 +166,6 @@
             max-width: 100%;
             margin: 0 auto;
         }
-
         .agenda-item {
             background: #f9f9f9;
             padding: 1rem;
@@ -199,7 +174,6 @@
             position: relative;
             overflow: hidden;
         }
-
         .agenda-item::before {
             content: '';
             position: absolute;
@@ -209,20 +183,17 @@
             height: 100%;
             background: #333;
         }
-
         .agenda-item h3 {
             font-size: 1.5rem;
             margin-bottom: 0.5rem;
             color: #333;
         }
-
         .agenda-item p {
             font-size: 1.1rem;
             color: #666;
             margin-bottom: 0.3rem;
             padding-left: 1.5rem;
         }
-
         .agenda-item p::before {
             content: '\2022';
             position: absolute;
@@ -230,24 +201,20 @@
             color: #333;
             font-size: 1.2rem;
         }
-
         /* Empresas */
         .empresas-logo {
             text-align: center;
             margin-bottom: 1rem;
         }
-
         .empresas-logo img {
             max-width: 150px;
             height: auto;
         }
-
         .empresas-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1rem;
         }
-
         .empresa-card {
             background: #f9f9f9;
             padding: 1rem;
@@ -259,46 +226,101 @@
             justify-content: flex-start;
             min-height: auto;
         }
-
         .empresa-card h3 {
             font-size: 1.4rem;
             margin-bottom: 0.5rem;
             color: #333;
         }
-
         .empresa-card p {
             font-size: 1rem;
             color: #666;
             flex-grow: 1;
         }
-
         .empresa-card .instagram-link {
             margin-top: 0.5rem;
         }
-
         .empresa-card .instagram-link img {
             width: 24px;
             height: 24px;
             transition: opacity 0.3s;
         }
-
         .empresa-card .instagram-link img:hover {
             opacity: 0.7;
         }
-
         /* Arquiteta */
+        .arquiteta-container {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
         .arquiteta {
             display: flex;
-            gap: 1rem;
+            gap: 2rem;
             align-items: center;
         }
-
         .arquiteta img {
             max-width: 100%;
             width: 400px;
+            border-radius: 12px;
+        }
+        .arquiteta h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        .arquiteta p {
+            font-family: 'Arial', sans-serif;
+            font-weight: normal;
+            font-size: 1rem;
+            color: #666;
+        }
+        /* Parceiros */
+        .parceiros-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .parceiro-card {
+            background: #f9f9f9;
+            padding: 1rem;
             border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        .parceiro-card img {
+            max-width: 150px;
+            height: auto;
+            border-radius: 8px;
+            margin: 0 auto 0.5rem;
+        }
+        .parceiro-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        .parceiro-card p {
+            font-size: 1rem;
+            color: #666;
+            flex-grow: 1;
+
+            
         }
 
+         .parceiro-card .instagram-link {
+            margin-top: 0.5rem;
+        }
+        .parceiro-card .instagram-link img {
+            width: 24px;
+            height: 24px;
+            transition: opacity 0.3s;
+        }
+        .parceiro-card .instagram-link img:hover {
+            opacity: 0.7;
+        }
         /* Galeria */
         .galeria-grid {
             display: grid;
@@ -306,7 +328,6 @@
             gap: 0.5rem;
             text-align: center;
         }
-
         .galeria-grid a {
             display: inline-block;
             padding: 0.5rem 1rem;
@@ -317,11 +338,9 @@
             transition: background 0.3s;
             font-size: 1rem;
         }
-
         .galeria-grid a:hover {
             background: #555;
         }
-
         .lightbox {
             display: none;
             position: fixed;
@@ -334,17 +353,14 @@
             justify-content: center;
             z-index: 2000;
         }
-
         .lightbox img {
             max-width: 90%;
             max-height: 90%;
             border-radius: 8px;
         }
-
         .lightbox.active {
             display: flex;
         }
-
         /* Cadastro */
         .cadastro {
             background: #f9f9f9;
@@ -354,20 +370,17 @@
             max-width: 100%;
             margin: 0 auto;
         }
-
         .cadastro form {
             display: flex;
             flex-direction: column;
             gap: 1rem;
         }
-
         .cadastro label {
             font-weight: bold;
             color: #333;
             font-size: 1rem;
             margin-bottom: 0.3rem;
         }
-
         .cadastro input, .cadastro textarea {
             padding: 0.8rem;
             border: 1px solid #ccc;
@@ -376,18 +389,15 @@
             transition: border-color 0.3s, box-shadow 0.3s;
             width: 100%;
         }
-
         .cadastro input:focus, .cadastro textarea:focus {
             outline: none;
             border-color: #555;
             box-shadow: 0 0 5px rgba(85, 85, 85, 0.3);
         }
-
         .cadastro textarea {
             min-height: 80px;
             resize: vertical;
         }
-
         .cadastro button {
             padding: 0.8rem;
             background: #333;
@@ -398,23 +408,19 @@
             cursor: pointer;
             transition: background 0.3s, transform 0.2s;
         }
-
         .cadastro button:hover {
             background: #555;
             transform: translateY(-2px);
         }
-
         /* Mapa */
         .mapa {
             text-align: center;
         }
-
         .mapa p {
             font-size: 1.1rem;
             color: #666;
             margin-bottom: 1rem;
         }
-
         .mapa iframe {
             width: 100%;
             height: 400px;
@@ -422,29 +428,24 @@
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-
         /* Footer */
         .footer {
             background: #f9f9f9;
             padding: 1.5rem;
             text-align: center;
         }
-
         .footer p {
             font-size: 1rem;
         }
-
         .footer a {
             color: #333;
             margin: 0 0.5rem;
             text-decoration: none;
             font-size: 1rem;
         }
-
         .footer a:hover {
             color: #666;
         }
-
         /* Media Queries para Responsividade */
         @media (max-width: 768px) {
             /* Navbar */
@@ -452,7 +453,6 @@
                 flex-direction: column;
                 gap: 0.5rem;
             }
-
             .nav-links {
                 display: none;
                 flex-direction: column;
@@ -460,255 +460,255 @@
                 text-align: center;
                 padding: 1rem 0;
             }
-
             .nav-links.active {
                 display: flex;
             }
-
             .nav-links a {
                 margin: 0.5rem 0;
                 font-size: 1rem;
             }
-
             .menu-toggle {
                 display: block;
                 position: absolute;
                 top: 1rem;
                 right: 1rem;
             }
-
             .navbar-logo img {
                 max-width: 60px;
             }
-
             .navbar-logo h1 {
                 font-size: 1.5rem;
             }
-
             /* Hero */
             .hero h1 {
                 font-size: 1.8rem;
             }
-
             .hero h3 {
                 font-size: 1.2rem;
             }
-
             .hero p {
                 font-size: 1rem;
             }
-
             .hero-content {
                 padding: 1rem;
                 max-width: 95%;
             }
-
             .btn {
                 padding: 0.5rem 1rem;
                 font-size: 0.9rem;
             }
-
             /* Sections */
             .section {
                 padding: 2rem 0.5rem;
             }
-
             .section h2 {
                 font-size: 1.5rem;
             }
-
             /* Sobre Nós */
             .sobre-nos p {
                 font-size: 1rem;
             }
-
             /* Arquiteta */
+            .arquiteta-container {
+                padding: 1rem;
+            }
             .arquiteta {
                 flex-direction: column;
                 text-align: center;
+                gap: 1rem;
             }
-
             .arquiteta img {
                 width: 300px;
                 max-width: 100%;
             }
-
+            .arquiteta h3 {
+                font-size: 1.2rem;
+            }
+            .arquiteta p {
+                font-size: 0.95rem;
+            }
+            /* Parceiros */
+            .parceiros-grid {
+                grid-template-columns: 1fr;
+            }
+            .parceiro-card img {
+                max-width: 120px;
+            }
+            .parceiro-card h3 {
+                font-size: 1.2rem;
+            }
+            .parceiro-card p {
+                font-size: 0.95rem;
+            }
             /* Agenda */
             .agenda-list {
                 max-width: 100%;
             }
-
             .agenda-item h3 {
                 font-size: 1.2rem;
             }
-
             .agenda-item p {
                 font-size: 1rem;
             }
-
             /* Empresas */
             .empresas-logo img {
                 max-width: 120px;
             }
-
             .empresas-grid {
                 grid-template-columns: 1fr;
             }
-
             .empresa-card h3 {
                 font-size: 1.2rem;
             }
-
             .empresa-card p {
                 font-size: 0.95rem;
             }
-
             .empresa-card .instagram-link img {
                 width: 20px;
                 height: 20px;
             }
-
             /* Galeria */
             .galeria-grid {
                 grid-template-columns: 1fr;
             }
-
             .galeria-grid a {
                 font-size: 0.95rem;
             }
-
             /* Cadastro */
             .cadastro {
                 padding: 1rem;
                 max-width: 95%;
             }
-
             .cadastro label {
                 font-size: 0.95rem;
             }
-
             .cadastro input, .cadastro textarea {
                 font-size: 0.95rem;
                 padding: 0.6rem;
             }
-
             .cadastro button {
                 font-size: 0.95rem;
                 padding: 0.6rem;
             }
-
             /* Mapa */
             .mapa p {
                 font-size: 1rem;
             }
-
             .mapa iframe {
                 height: 300px;
             }
         }
-
         @media (max-width: 480px) {
             .navbar-logo img {
                 max-width: 50px;
             }
-
             .navbar-logo h1 {
                 font-size: 1.2rem;
             }
-
             .hero h1 {
                 font-size: 1.5rem;
             }
-
             .hero h3 {
                 font-size: 1rem;
             }
-
             .hero p {
                 font-size: 0.9rem;
             }
-
             .btn {
                 padding: 0.4rem 0.8rem;
                 font-size: 0.8rem;
             }
-
             .section h2 {
                 font-size: 1.2rem;
             }
-
             .sobre-nos p {
                 font-size: 0.9rem;
             }
-
             .arquiteta img {
                 width: 250px;
                 max-width: 100%;
             }
-
+            .arquiteta h3 {
+                font-size: 1rem;
+            }
+            .arquiteta p {
+                font-size: 0.9rem;
+            }
+            .parceiro-card img {
+                max-width: 100px;
+            }
+            .parceiro-card h3 {
+                font-size: 1rem;
+            }
+            .parceiro-card p {
+                font-size: 0.9rem;
+            }
             .agenda-item h3 {
                 font-size: 1rem;
             }
-
             .agenda-item p {
                 font-size: 0.9rem;
             }
-
             .empresa-card h3 {
                 font-size: 1rem;
             }
-
             .empresa-card p {
                 font-size: 0.9rem;
             }
-
             .mapa p {
                 font-size: 0.9rem;
             }
-
             .mapa iframe {
                 height: 250px;
             }
-
             .footer p, .footer a {
                 font-size: 0.9rem;
             }
         }
-
         @media (min-width: 769px) and (max-width: 1024px) {
             .hero h1 {
                 font-size: 2rem;
             }
-
             .hero h3 {
                 font-size: 1.3rem;
             }
-
             .hero p {
                 font-size: 1.1rem;
             }
-
             .section h2 {
                 font-size: 1.8rem;
             }
-
             .sobre-nos p {
                 font-size: 1.05rem;
             }
-
             .empresas-grid {
                 grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             }
-
             .arquiteta img {
                 width: 350px;
                 max-width: 100%;
             }
-
+            .arquiteta h3 {
+                font-size: 1.3rem;
+            }
+            .arquiteta p {
+                font-size: 1rem;
+            }
+            .parceiros-grid {
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            }
+            .parceiro-card img {
+                max-width: 130px;
+            }
+            .parceiro-card h3 {
+                font-size: 1.3rem;
+            }
+            .parceiro-card p {
+                font-size: 1rem;
+            }
             .mapa p {
                 font-size: 1.05rem;
             }
-
             .mapa iframe {
                 height: 350px;
             }
@@ -728,12 +728,12 @@
                 <a href="#empresas">Empresas</a>
                 <a href="#sobre-nos">Sobre Nós</a>
                 <a href="#arquiteta">Arquiteta</a>
+                <a href="#parceiros">Parceiros</a>
                 <a href="#galeria">Suas Fotos</a>
                 <a href="#cadastro">Cadastro</a>
             </div>
         </div>
     </nav>
-
     <!-- Hero Section -->
     <section class="hero">
         <div class="slideshow">
@@ -749,38 +749,33 @@
             <a href="#cadastro" class="btn">Inscreva-se Agora</a>
         </div>
     </section>
-
     <!-- Sobre Nós -->
     <section id="sobre-nos" class="section sobre-nos">
         <h2>Sobre Nós</h2>
         <p>O Espaço Entremares nasce para traduzir o encontro perfeito entre natureza, arquitetura e bem-estar. Criado especialmente para a edição 2025 da mostra Morar Mais, que acontece no Joá, o projeto foi assinado pela arquiteta Shay Secaf, convidada por um grupo de empresas especializadas em soluções para áreas externas.
-
-Com um olhar contemporâneo e acolhedor, Shay desenvolveu um ambiente que valoriza a integração entre o espaço construído e o entorno natural, criando uma atmosfera de conexão, relaxamento e inspiração. 
-
+Com um olhar contemporâneo e acolhedor, Shay desenvolveu um ambiente que valoriza a integração entre o espaço construído e o entorno natural, criando uma atmosfera de conexão, relaxamento e inspiração.
 <p>Cada detalhe foi pensado para oferecer uma experiência única ao ar livre, celebrando o estilo de vida carioca de forma sofisticada e descomplicada.
-
 O Espaço é mais do que um projeto de arquitetura — é um convite para sentir, viver e se reconectar.
-
 <p>Venha visitar o Espaço Entremares, um convite para viver a experiência de um refúgio ao ar livre, onde a natureza encontra o design contemporâneo.</p>
     </section>
-
     <!-- Arquiteta -->
     <section id="arquiteta" class="section">
         <h2>Nossa Arquiteta</h2>
-        <div class="arquiteta">
-            <img src="shaysecaf1.png" alt="Shay Secaf">
-            <div>
-                <h3>Shay Secaf</h3>
-                <p>A arquiteta Shayanne Secaf é uma profissional apaixonada por criar ambientes que vão além da estética, buscando proporcionar experiências sensoriais e emocionais aos seus clientes. Com um portfólio diversificado, ela atua tanto em projetos residenciais quanto comerciais, sempre com o objetivo de transformar espaços em lugares especiais e acolhedores.</p>
+        <div class="arquiteta-container">
+            <div class="arquiteta">
+                <img src="shaysecaf1.png" alt="Shay Secaf">
+                <div>
+                    <h3>Shay Secaf</h3>
+                    <p>A arquiteta Shayanne Secaf é uma profissional apaixonada por criar ambientes que vão além da estética, buscando proporcionar experiências sensoriais e emocionais aos seus clientes. Com um portfólio diversificado, ela atua tanto em projetos residenciais quanto comerciais, sempre com o objetivo de transformar espaços em lugares especiais e acolhedores.</p>
+                </div>
             </div>
         </div>
     </section>
-
     <!-- Empresas -->
     <section id="empresas" class="section">
         <div class="empresas-logo">
         </div>
-        <h2>7 Marcas, um só propósito: Criar um espaço inesquecível na Morar Mais</h2>
+        <h2>8 Marcas, um só propósito: Criar um espaço inesquecível na Morar Mais</h2>
         <div class="empresas-grid">
             <div class="empresa-card">
                 <h3>Almo Rael</h3>
@@ -804,6 +799,13 @@ O Espaço é mais do que um projeto de arquitetura — é um convite para sentir
                 </a>
             </div>
             <div class="empresa-card">
+                <h3>Hometree</h3>
+                <p>Hometree Zona Sul e Barra da Tijuca conecta lares e empresas ao futuro por meio de automação residencial e comercial sem fios e sem necessidade de reformas. A empresa oferece soluções práticas e inovadoras para transformar ambientes em espaços inteligentes e funcionais.</p>
+                <a href="https://www.instagram.com/hometree_zonasulbarra" class="instagram-link">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Hometree">
+                </a>
+            </div>
+            <div class="empresa-card">
                 <h3>iGUi Conceito Zona Sul</h3>
                 <p>iGUi Conceito Zona Sul oferece piscinas de alto padrão exclusivas no Rio de Janeiro, unindo design, tecnologia e sofisticação. A empresa atende diretamente no imóvel do cliente, proporcionando uma experiência personalizada do início ao fim.</p>
                 <a href="https://www.instagram.com/iguiconceitozona_sul" class="instagram-link">
@@ -818,22 +820,34 @@ O Espaço é mais do que um projeto de arquitetura — é um convite para sentir
                 </a>
             </div>
             <div class="empresa-card">
-                <h3>Toldos Dias</h3>
-                <p>Toldos Dias oferece toldos e coberturas de alto padrão, combinando design, conforto e proteção. Com mais de 75 anos de experiência, entrega soluções exclusivas e sob medida para residências, comércios e empresas.</p>
-                <a href="https://www.instagram.com/toldosdias" class="instagram-link">
-                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Toldos Dias">
-                </a>
-            </div>
-            <div class="empresa-card">
                 <h3>Terralar</h3>
                 <p>Terralar Freguesia é uma loja de materiais de construção com 10 anos de tradição, oferecendo produtos para o lar e entrega em todo o Rio de Janeiro.</p>
                 <a href="https://www.instagram.com/terralarfreguesia" class="instagram-link">
                     <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Terralar">
                 </a>
             </div>
+            <div class="empresa-card">
+                <h3>Toldos Dias</h3>
+                <p>Toldos Dias oferece toldos e coberturas de alto padrão, combinando design, conforto e proteção. Com mais de 75 anos de experiência, entrega soluções exclusivas e sob medida para residências, comércios e empresas.</p>
+                <a href="https://www.instagram.com/toldosdias" class="instagram-link">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Toldos Dias">
+                </a>
+            </div>
         </div>
     </section>
-
+    <!-- Parceiros -->
+    <section id="parceiros" class="section">
+        <h2>Nossos Parceiros</h2>
+        <div class="parceiros-grid">
+            <div class="parceiro-card">
+                <h3>RDuarte Reformas</h3>
+                <p>RDuarte Reformas é um parceiro essencial no projeto Espaço Entremares, trazendo sua dedicação e expertise para garantir a excelência na execução e colaboração em todas as etapas do evento.</p>
+            <a href="https://www.instagram.com/rduartereforma" class="instagram-link">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Rduarte Reforma">
+                </a>
+            </div>
+        </div>
+    </section>
     <!-- Agenda -->
     <section id="agenda" class="section">
         <h2>Agenda de Eventos</h2>
@@ -846,7 +860,6 @@ O Espaço é mais do que um projeto de arquitetura — é um convite para sentir
             </div>
         </div>
     </section>
-
     <!-- Galeria -->
     <section id="galeria" class="section">
         <h2>Veja Suas Fotos Aqui</h2>
@@ -857,7 +870,6 @@ O Espaço é mais do que um projeto de arquitetura — é um convite para sentir
             <img src="" alt="Lightbox Image">
         </div>
     </section>
-
     <!-- Cadastro -->
     <section id="cadastro" class="section">
         <h2>Cadastre-se aqui</h2>
@@ -879,14 +891,12 @@ O Espaço é mais do que um projeto de arquitetura — é um convite para sentir
             </form>
         </div>
     </section>
-
     <!-- Mapa -->
     <section id="mapa" class="section mapa">
         <h2>Onde Nos Encontrar</h2>
         <p>R. Presciliano da Silva, 188 Parte - Joá, Rio de Janeiro - RJ, 22611-130</p>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.938841013231!2d-43.27542942306651!3d-22.953148837947315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bd9e4b6c7b6f7%3A0xbec6f5f2a6b7f2c0!2sR.%20Presciliano%20da%20Silva%2C%20188%20-%20Jo%C3%A1%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2022611-130%2C%20Brazil!5e0!3m2!1sen!2sus!4v1696451234567" allowfullscreen="" loading="lazy"></iframe>
     </section>
-
     <!-- Footer -->
     <footer class="footer">
         <p>&copy; 2025 Entremares. Todos os direitos reservados.</p>
@@ -894,49 +904,40 @@ O Espaço é mais do que um projeto de arquitetura — é um convite para sentir
         <div>
         </div>
     </footer>
-
     <script>
         // Slideshow
         const slides = document.querySelectorAll('.slideshow img');
         let currentSlide = 0;
-
         function showSlide(index) {
             slides.forEach((slide, i) => {
                 slide.classList.toggle('active', i === index);
             });
         }
-
         setInterval(() => {
             currentSlide = (currentSlide + 1) % slides.length;
             showSlide(currentSlide);
         }, 5000);
-
         // Lightbox
         const galleryImages = document.querySelectorAll('.galeria-grid img');
         const lightbox = document.querySelector('.lightbox');
         const lightboxImage = lightbox.querySelector('img');
-
         galleryImages.forEach(img => {
             img.addEventListener('click', () => {
                 lightboxImage.src = img.src;
                 lightbox.classList.add('active');
             });
         });
-
         lightbox.addEventListener('click', () => {
             lightbox.classList.remove('active');
         });
-
         // Form Submission (simulado)
         document.querySelector('form').addEventListener('submit', (e) => {
             e.preventDefault();
             alert('Formulário enviado com sucesso!');
         });
-
         // Menu Hambúrguer
         const menuToggle = document.querySelector('.menu-toggle');
         const navLinks = document.querySelector('.nav-links');
-
         menuToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
             menuToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
