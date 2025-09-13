@@ -275,7 +275,6 @@
             font-size: 1rem;
             color: #666;
         }
-
         .arquiteta .instagram-link {
             margin-top: 0.5rem;
         }
@@ -288,7 +287,6 @@
         .arquiteta .instagram-link img:hover {
             opacity: 0.7;
         }
-
         /* Parceiros */
         .parceiros-grid {
             display: grid;
@@ -320,11 +318,8 @@
             font-size: 1rem;
             color: #666;
             flex-grow: 1;
-
-            
         }
-
-         .parceiro-card .instagram-link {
+        .parceiro-card .instagram-link {
             margin-top: 0.5rem;
         }
         .parceiro-card .instagram-link img {
@@ -425,6 +420,33 @@
         .cadastro button:hover {
             background: #555;
             transform: translateY(-2px);
+        }
+        .form-message {
+            display: none;
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 1rem;
+            animation: fadeOut 3s forwards;
+        }
+        .form-message.success {
+            background: #e6f4ea;
+            color: #2e7d32;
+        }
+        .form-message.error {
+            background: #ffebee;
+            color: #d32f2f;
+        }
+        .form-message.success::before {
+            content: '✔ ';
+            font-size: 1.2rem;
+            color: #2e7d32;
+        }
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            80% { opacity: 1; }
+            100% { opacity: 0; display: none; }
         }
         /* Mapa */
         .mapa {
@@ -604,6 +626,10 @@
                 font-size: 0.95rem;
                 padding: 0.6rem;
             }
+            .form-message {
+                font-size: 0.95rem;
+                padding: 0.8rem;
+            }
             /* Mapa */
             .mapa p {
                 font-size: 1rem;
@@ -677,6 +703,10 @@
             }
             .footer p, .footer a {
                 font-size: 0.9rem;
+            }
+            .form-message {
+                font-size: 0.9rem;
+                padding: 0.6rem;
             }
         }
         @media (min-width: 769px) and (max-width: 1024px) {
@@ -777,19 +807,15 @@ O Espaço é mais do que um projeto de arquitetura — é um convite para sentir
         <h2>Nossa Arquiteta</h2>
         <div class="arquiteta-container">
             <div class="arquiteta">
-                
                 <img src="shaysecaf1.png" alt="Shay Secaf">
                 <div>
-                    
-                    
                     <h3>Shay Secaf</h3>
                     <a href="https://www.instagram.com/shaysecaf" class="instagram-link">
-                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Solebrezza">
-                </a>
+                        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Solebrezza">
+                    </a>
                     <p>A arquiteta Shayanne Secaf é uma profissional apaixonada por criar ambientes que vão além da estética, buscando proporcionar experiências sensoriais e emocionais aos seus clientes. Com um portfólio diversificado, ela atua tanto em projetos residenciais quanto comerciais, sempre com o objetivo de transformar espaços em lugares especiais e acolhedores.</p>
                 </div>
             </div>
-            
         </div>
     </section>
     <!-- Empresas -->
@@ -805,31 +831,27 @@ O Espaço é mais do que um projeto de arquitetura — é um convite para sentir
                     <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Espaço Varandas">
                 </a>
             </div>
-
-             <div class="empresa-card">
+            <div class="empresa-card">
                 <h3>iGUi Conceito Zona Sul</h3>
                 <p>iGUi Conceito Zona Sul oferece piscinas de alto padrão exclusivas no Rio de Janeiro, unindo design, tecnologia e sofisticação. A empresa atende diretamente no imóvel do cliente, proporcionando uma experiência personalizada do início ao fim.</p>
                 <a href="https://www.instagram.com/iguizonasulrj" class="instagram-link">
                     <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram iGUi Conceito Zona Sul">
                 </a>
             </div>
-
-             <div class="empresa-card">
+            <div class="empresa-card">
                 <h3>Solebrezza</h3>
                 <p>Sole Brezza oferece ombrelones de alta qualidade que unem funcionalidade, sofisticação e design suíço. Seus produtos são reconhecidos por precisão, inovação e durabilidade, garantindo ambientes externos elegantes e confortáveis, tanto residenciais quanto comerciais.</p>
                 <a href="https://www.instagram.com/solebrezza" class="instagram-link">
                     <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Solebrezza">
                 </a>
             </div>
-
-             <div class="empresa-card">
+            <div class="empresa-card">
                 <h3>Toldos Dias</h3>
                 <p>Toldos Dias oferece toldos e coberturas de alto padrão, combinando design, conforto e proteção. Com mais de 75 anos de experiência, entrega soluções exclusivas e sob medida para residências, comércios e empresas.</p>
                 <a href="https://www.instagram.com/toldosdias" class="instagram-link">
                     <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Toldos Dias">
                 </a>
             </div>
-
             <div class="empresa-card">
                 <h3>Almo Rael</h3>
                 <p>Almo Rael é uma empresa com mais de 20 anos de mercado, especialista em telas em LED. Atua em todas as etapas do projeto, da escolha do modelo à instalação e suporte pós-venda, garantindo qualidade e atendimento especializado.</p>
@@ -844,7 +866,6 @@ O Espaço é mais do que um projeto de arquitetura — é um convite para sentir
                     <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Coletivo Jardim Secreto">
                 </a>
             </div>
-          
             <div class="empresa-card">
                 <h3>Hometree</h3>
                 <p>Hometree Zona Sul e Barra da Tijuca conecta lares e empresas ao futuro por meio de automação residencial e comercial sem fios e sem necessidade de reformas. A empresa oferece soluções práticas e inovadoras para transformar ambientes em espaços inteligentes e funcionais.</p>
@@ -852,7 +873,6 @@ O Espaço é mais do que um projeto de arquitetura — é um convite para sentir
                     <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Hometree">
                 </a>
             </div>
-           
             <div class="empresa-card">
                 <h3>Terralar</h3>
                 <p>Terralar Freguesia é uma loja de materiais de construção com 10 anos de tradição, oferecendo produtos para o lar e entrega em todo o Rio de Janeiro.</p>
@@ -860,7 +880,6 @@ O Espaço é mais do que um projeto de arquitetura — é um convite para sentir
                     <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Terralar">
                 </a>
             </div>
-           
         </div>
     </section>
     <!-- Parceiros -->
@@ -870,7 +889,7 @@ O Espaço é mais do que um projeto de arquitetura — é um convite para sentir
             <div class="parceiro-card">
                 <h3>RDuarte Reformas</h3>
                 <p>RDuarte Reformas é um parceiro essencial no projeto Espaço Entremares, trazendo sua dedicação e expertise para garantir a excelência na execução e colaboração em todas as etapas do evento.</p>
-            <a href="https://www.instagram.com/rduartereforma" class="instagram-link">
+                <a href="https://www.instagram.com/rduartereforma" class="instagram-link">
                     <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Rduarte Reforma">
                 </a>
             </div>
@@ -902,21 +921,22 @@ O Espaço é mais do que um projeto de arquitetura — é um convite para sentir
     <section id="cadastro" class="section">
         <h2>Cadastre-se aqui</h2>
         <div class="cadastro">
-            <form>
+            <form id="cadastro-form" action="https://formspree.io/f/xeolddja" method="POST">
                 <label for="nome">Nome Completo</label>
-                <input id="nome" type="text" placeholder="Digite seu nome" required>
+                <input id="nome" type="text" name="nome" placeholder="Digite seu nome" required>
                 <label for="email">E-mail</label>
-                <input id="email" type="email" placeholder="Digite seu e-mail" required>
+                <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
                 <label for="telefone">Telefone</label>
-                <input id="telefone" type="tel" placeholder="Digite seu telefone" required>
+                <input id="telefone" type="tel" name="telefone" placeholder="Digite seu telefone" required>
                 <label for="instagram">Instagram</label>
-                <input id="instagram" type="text" placeholder="Digite seu Instagram (ex.: @seu_usuario)">
+                <input id="instagram" type="text" name="instagram" placeholder="Digite seu Instagram (ex.: @seu_usuario)">
                 <label for="profissao">Profissão</label>
-                <input id="profissao" type="text" placeholder="Digite sua profissão">
+                <input id="profissao" type="text" name="profissao" placeholder="Digite sua profissão">
                 <label for="mensagem">Mensagem (opcional)</label>
-                <textarea id="mensagem" placeholder="Escreva sua mensagem"></textarea>
+                <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem"></textarea>
                 <button type="submit">Enviar</button>
             </form>
+            <div id="form-message" class="form-message"></div>
         </div>
     </section>
     <!-- Mapa -->
@@ -958,17 +978,51 @@ O Espaço é mais do que um projeto de arquitetura — é um convite para sentir
         lightbox.addEventListener('click', () => {
             lightbox.classList.remove('active');
         });
-        // Form Submission (simulado)
-        document.querySelector('form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Formulário enviado com sucesso!');
-        });
         // Menu Hambúrguer
         const menuToggle = document.querySelector('.menu-toggle');
         const navLinks = document.querySelector('.nav-links');
         menuToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
             menuToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+        });
+        // Form Submission with AJAX
+        const form = document.getElementById('cadastro-form');
+        const formMessage = document.getElementById('form-message');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                if (response.ok) {
+                    formMessage.className = 'form-message success';
+                    formMessage.textContent = 'Sua mensagem foi enviada com sucesso!';
+                    formMessage.style.display = 'block';
+                    form.reset();
+                    setTimeout(() => {
+                        formMessage.style.display = 'none';
+                    }, 3000);
+                } else {
+                    formMessage.className = 'form-message error';
+                    formMessage.textContent = 'Erro ao enviar a mensagem. Tente novamente.';
+                    formMessage.style.display = 'block';
+                    setTimeout(() => {
+                        formMessage.style.display = 'none';
+                    }, 3000);
+                }
+            } catch (error) {
+                formMessage.className = 'form-message error';
+                formMessage.textContent = 'Erro ao enviar a mensagem. Tente novamente.';
+                formMessage.style.display = 'block';
+                setTimeout(() => {
+                    formMessage.style.display = 'none';
+                }, 3000);
+            }
         });
     </script>
 </body>
