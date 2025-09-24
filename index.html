@@ -46,7 +46,7 @@
             align-items: center;
         }
         .navbar-logo img {
-            max-width: 80px;
+            max-width: 150px;
             height: auto;
             margin-bottom: 8px;
         }
@@ -330,6 +330,30 @@
         .parceiro-card .instagram-link img:hover {
             opacity: 0.7;
         }
+        /* Sorteio */
+        .sorteio {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        .sorteio h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        .sorteio p, .sorteio li {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+        .sorteio ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
         /* Galeria */
         .galeria-grid {
             display: grid;
@@ -421,6 +445,19 @@
             background: #555;
             transform: translateY(-2px);
         }
+        .cadastro .checkbox-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+        .cadastro .checkbox-container input[type="checkbox"] {
+            margin-top: 0.2rem;
+        }
+        .cadastro .checkbox-container label {
+            font-weight: normal;
+            font-size: 0.9rem;
+            color: #666;
+        }
         .form-message {
             display: none;
             margin-top: 1rem;
@@ -510,7 +547,7 @@
                 right: 1rem;
             }
             .navbar-logo img {
-                max-width: 60px;
+                max-width: 120px;
             }
             .navbar-logo h1 {
                 font-size: 1.5rem;
@@ -603,6 +640,13 @@
                 width: 20px;
                 height: 20px;
             }
+            /* Sorteio */
+            .sorteio h3 {
+                font-size: 1.2rem;
+            }
+            .sorteio p, .sorteio li {
+                font-size: 0.95rem;
+            }
             /* Galeria */
             .galeria-grid {
                 grid-template-columns: 1fr;
@@ -622,6 +666,9 @@
                 font-size: 0.95rem;
                 padding: 0.6rem;
             }
+            .cadastro .checkbox-container label {
+                font-size: 0.85rem;
+            }
             .cadastro button {
                 font-size: 0.95rem;
                 padding: 0.6rem;
@@ -638,9 +685,9 @@
                 height: 300px;
             }
         }
-        @media (max-width: 480px) {
+         @media (max-width: 480px) {
             .navbar-logo img {
-                max-width: 50px;
+                max-width: 130px;
             }
             .navbar-logo h1 {
                 font-size: 1.2rem;
@@ -695,6 +742,12 @@
             .empresa-card p {
                 font-size: 0.9rem;
             }
+            .sorteio h3 {
+                font-size: 1rem;
+            }
+            .sorteio p, .sorteio li {
+                font-size: 0.9rem;
+            }
             .mapa p {
                 font-size: 0.9rem;
             }
@@ -707,6 +760,9 @@
             .form-message {
                 font-size: 0.9rem;
                 padding: 0.6rem;
+            }
+            .cadastro .checkbox-container label {
+                font-size: 0.8rem;
             }
         }
         @media (min-width: 769px) and (max-width: 1024px) {
@@ -750,6 +806,12 @@
             .parceiro-card p {
                 font-size: 1rem;
             }
+            .sorteio h3 {
+                font-size: 1.3rem;
+            }
+            .sorteio p, .sorteio li {
+                font-size: 1rem;
+            }
             .mapa p {
                 font-size: 1.05rem;
             }
@@ -764,7 +826,7 @@
     <nav class="navbar">
         <div class="container">
             <div class="navbar-logo">
-                <h1>Entremares</h1>
+                <img src="logoespaçoentremares.jpg" alt="Logo Entremares">
             </div>
             <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
             <div class="nav-links">
@@ -773,6 +835,7 @@
                 <a href="#sobre-nos">Sobre Nós</a>
                 <a href="#arquiteta">Arquiteta</a>
                 <a href="#parceiros">Parceiros</a>
+                <a href="#sorteio">Sorteio</a>
                 <a href="#galeria">Suas Fotos</a>
                 <a href="#cadastro">Cadastro</a>
             </div>
@@ -789,8 +852,8 @@
         <div class="hero-content">
             <h1>Espaço Entremares</h1>
             <h3>Morar Mais 2025</h3>
-            <p>Este espaço nasceu da colaboração de sete empresas apaixonadas por design, inovação e experiências. Cada uma trouxe sua expertise para transformar o ambiente em um convite aos sentidos.</p>
-            <a href="#cadastro" class="btn">Inscreva-se Agora</a>
+            <p>Este espaço nasceu da colaboração de 9 empresas apaixonadas por design, inovação e experiências. Cada uma trouxe sua expertise para transformar o ambiente em um convite aos sentidos.</p>
+            <a href="#cadastro" class="btn">Clique Aqui Para Se Inscrever No Sorteio</a>
         </div>
     </section>
     <!-- Sobre Nós -->
@@ -822,7 +885,7 @@ O Espaço é mais do que um projeto de arquitetura — é um convite para sentir
     <section id="empresas" class="section">
         <div class="empresas-logo">
         </div>
-        <h2>8 Marcas, um só propósito: Criar um espaço inesquecível na Morar Mais</h2>
+        <h2>9 Marcas, um só propósito: Criar um espaço inesquecível na Morar Mais</h2>
         <div class="empresas-grid">
             <div class="empresa-card">
                 <h3>Espaço Varandas</h3>
@@ -867,6 +930,13 @@ O Espaço é mais do que um projeto de arquitetura — é um convite para sentir
                 </a>
             </div>
             <div class="empresa-card">
+                <h3>Global MEV Envidraçamentos</h3>
+                <p>Global MEV Envidraçamentos é especializada em soluções de envidraçamento de alto padrão, oferecendo produtos inovadores e duráveis para áreas internas e externas, garantindo segurança e estética em projetos residenciais e comerciais.</p>
+                <a href="https://www.instagram.com/globalmev_envidracamentos" class="instagram-link">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Global MEV Envidraçamentos">
+                </a>
+            </div>
+            <div class="empresa-card">
                 <h3>Hometree</h3>
                 <p>Hometree Zona Sul e Barra da Tijuca conecta lares e empresas ao futuro por meio de automação residencial e comercial sem fios e sem necessidade de reformas. A empresa oferece soluções práticas e inovadoras para transformar ambientes em espaços inteligentes e funcionais.</p>
                 <a href="https://www.instagram.com/hometree_zonasulbarra" class="instagram-link">
@@ -893,6 +963,69 @@ O Espaço é mais do que um projeto de arquitetura — é um convite para sentir
                     <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Rduarte Reforma">
                 </a>
             </div>
+            <div class="parceiro-card">
+                <h3>Verao Tintas</h3>
+                <p>Verao Tintas é reconhecida por sua qualidade em tintas e acabamentos, contribuindo com soluções inovadoras para o design e a durabilidade dos ambientes do Espaço Entremares.</p>
+                <a href="https://www.instagram.com/verao.tintas" class="instagram-link">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Verao Tintas">
+                </a>
+            </div>
+            <div class="parceiro-card">
+                <h3>Marmoraria Carioca</h3>
+                <p>Marmoraria Carioca oferece peças em mármore e granito de alta qualidade, trazendo sofisticação e resistência para os projetos do Espaço Entremares.</p>
+                <a href="https://www.instagram.com/marmorariacariocaoficial" class="instagram-link">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Marmoraria Carioca">
+                </a>
+            </div>
+            <div class="parceiro-card">
+                <h3>Briled Iluminação</h3>
+                <p>Briled Iluminação proporciona soluções luminotécnicas modernas, destacando a beleza dos espaços com design e eficiência energética no Espaço Entremares.</p>
+                <a href="https://www.instagram.com/brilediluminacao" class="instagram-link">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Brile Iluminação">
+                </a>
+            </div>
+            <div class="parceiro-card">
+                <h3>DJ Mark Brook</h3>
+                <p>DJ Mark Brook eleva a experiência do Espaço Entremares com trilhas sonoras personalizadas, criando atmosferas únicas para os visitantes.</p>
+                <a href="https://www.instagram.com/djmarkbrook" class="instagram-link">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram DJ Mark Brook">
+                </a>
+            </div>
+            <div class="parceiro-card">
+                <h3>Decor RJ Casa Shopping</h3>
+                <p>Decor RJ Casa Shopping enriquece o projeto com móveis e decorações sofisticadas, contribuindo para a identidade visual do Espaço Entremares.</p>
+                <a href="https://www.instagram.com/decor.rj.casashopping" class="instagram-link">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Decor RJ Casa Shopping">
+                </a>
+            </div>
+            <div class="parceiro-card">
+                <h3>Tanto</h3>
+                <p>Tanto traz soluções criativas e sustentáveis para o design de interiores, agregando valor ao ambiente do Espaço Entremares.</p>
+                <a href="https://www.instagram.com/tanto.com.br" class="instagram-link">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Tanto">
+                </a>
+            </div>
+            <div class="parceiro-card">
+                <h3>Vilarejo Conceito</h3>
+                <p>Vilarejo Conceito oferece serviços de arquitetura e decoração com foco em personalização, fortalecendo o conceito do Espaço Entremares.</p>
+                <a href="https://www.instagram.com/vilarejoconceito" class="instagram-link">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Vilarejo Conceito">
+                </a>
+            </div>
+            <div class="parceiro-card">
+                <h3>Dracena Home</h3>
+                <p>Dracena Home contribui com elementos decorativos naturais e sustentáveis, harmonizando o Espaço Entremares com o meio ambiente.</p>
+                <a href="https://www.instagram.com/dracenahome" class="instagram-link">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Dracena Home">
+                </a>
+            </div>
+            <div class="parceiro-card">
+                <h3>Galeria Hathi</h3>
+                <p>Galeria Hathi enriquece o Espaço Entremares com peças de arte e decoração exclusivas, trazendo sofisticação e personalidade ao ambiente.</p>
+                <a href="https://www.instagram.com/galeriahathi" class="instagram-link">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Galeria Hathi">
+                </a>
+            </div>
         </div>
     </section>
     <!-- Agenda -->
@@ -905,21 +1038,104 @@ O Espaço é mais do que um projeto de arquitetura — é um convite para sentir
                 <p><strong>Horário:</strong> 16:30 - 19:30</p>
                 <p><strong>Local:</strong> Morar Mais Rio, Joá</p>
             </div>
+            <div class="agenda-item">
+                <h3>Evento de Abertura</h3>
+                <p><strong>Data:</strong> 02/10/2025</p>
+                <p><strong>Horário:</strong> 16:30 - 20:30</p>
+                <p><strong>Local:</strong> Morar Mais Rio, Joá</p>
+            </div>
+            <div class="agenda-item">
+                <h3>Evento </h3>
+                <p><strong>Data:</strong> 16/10/2025</p>
+                <p><strong>Horário:</strong> 16:00 - 19:00</p>
+                <p><strong>Local:</strong> Morar Mais Rio, Joá</p>
+            </div>
+            <div class="agenda-item">
+                <h3>Arquitetando o Equilíbrio - Um Encontro Para Recarregar a Mente Criativa</h3>
+                <p><strong>Data:</strong> 23/10/2025</p>
+                <p><strong>Horário:</strong> 15:00 - 18:00</p>
+                <p><strong>Local:</strong> Morar Mais Rio, Joá</p>
+            </div>
+              <div class="agenda-item">
+                <h3>Evento</h3>
+                <p><strong>Data:</strong> 30/10/2025</p>
+                <p><strong>Horário:</strong> 16:00 - 19:00</p>
+                <p><strong>Local:</strong> Morar Mais Rio, Joá</p>
+            </div>
+            <div class="agenda-item">
+                <h3>Evento de Encerramento</h3>
+                <p><strong>Data:</strong> 06/11/2025</p>
+                <p><strong>Horário:</strong> 16:30 - 20:30</p>
+                <p><strong>Local:</strong> Morar Mais Rio, Joá</p>
+            </div>
         </div>
     </section>
-    <!-- Galeria -->
-    <section id="galeria" class="section">
-        <h2>Veja Suas Fotos Aqui</h2>
-        <div class="galeria-grid">
-            <a href="https://www.google.com">Drive de fotos</a>
+    <!-- Sorteio -->
+    <section id="sorteio" class="section">
+        <h2>Regulamento do Sorteio</h2>
+        <div class="sorteio">
+            <p>Este regulamento estabelece as condições de participação no sorteio promovido pelos perfis parceiros listados abaixo. Ao participar, o usuário declara que leu e concorda integralmente com as regras descritas.</p>
+            <h3>Prêmios</h3>
+            <p>Serão sorteados:</p>
+            <ul>
+                <li>01 (um) Ombrellone central modelo 2x2 com base</li>
+                <li>10 (dez) vagas para visitação à fábrica da iGUi</li>
+                <li>01 (um) balanço</li>
+                <li>04 (quatro) horas de gravação (Videomaker Mobile), com edição inclusa</li>
+            </ul>
+            <h3>Quem pode participar</h3>
+            <p>Poderão participar todas as pessoas físicas, maiores de 18 anos, residentes no Brasil, que cumprirem a regra de participação descrita neste regulamento.</p>
+            <h3>Regras de participação</h3>
+            <p>Para validar sua participação no sorteio, o usuário deverá seguir todos os perfis parceiros no Instagram:</p>
+            <ul>
+                <li>@shaysecaf</li>
+                <li>@toldosdias</li>
+                <li>@iguizonasulrj</li>
+                <li>@solebrezza</li>
+                <li>@espacovarandasmoveis</li>
+                <li>@almorael</li>
+                <li>@terralarfreguesia</li>
+                <li>@hometree_zonasulbarra</li>
+                <li>@coletivojardimsecreto</li>
+                <li>@globalmev_envidracamentos</li>
+                <li>@_apcmarketing</li>
+            </ul>
+            <h3>Sorteio e divulgação</h3>
+            <p>
+                <ul>
+                    <li>O sorteio será realizado no último dia do evento Morar Mais no dia 09/11 (horário a definir)</li>
+                    <li>O resultado será divulgado por meio dos stories de um dos perfis organizadores</li>
+                    <li>Os vencedores também poderão ser contatados por mensagem direta no Instagram</li>
+                </ul>
+            </p>
+            <h3>Entrega dos prêmios</h3>
+            <p>
+                <ul>
+                    <li>Os prêmios são pessoais e intransferíveis, não sendo permitida a troca por dinheiro</li>
+                    <li>A entrega dos prêmios físicos será combinada diretamente com o ganhador, podendo envolver retirada no local ou envio mediante frete a ser acordado</li>
+                    <li>A visitação à fábrica da iGUi ocorrerá em data previamente agendada com os vencedores</li>
+                    <li>O prêmio referente às horas de gravação deverá ser agendado com a equipe responsável, de acordo com a disponibilidade</li>
+                </ul>
+            </p>
+            <h3>Desclassificação</h3>
+            <p>Serão desclassificados os participantes que:</p>
+            <ul>
+                <li>Não cumprirem integralmente a regra de participação</li>
+                <li>Utilizarem perfis falsos, de empresas ou automatizados</li>
+                <li>Tentarem fraudar ou manipular o resultado do sorteio</li>
+            </ul>
+            <h3>Disposições finais</h3>
+            <p>
+                <ul>
+                    <li>A participação neste sorteio implica a aceitação integral e irrestrita deste regulamento</li>
+                    <li>Os organizadores reservam-se o direito de alterar as condições deste regulamento a qualquer tempo, caso necessário, mediante divulgação prévia</li>
+                </ul>
+            </p>
         </div>
-        <div class="lightbox">
-            <img src="" alt="Lightbox Image">
-        </div>
-    </section>
+   
     <!-- Cadastro -->
     <section id="cadastro" class="section">
-        <h2>Cadastre-se aqui</h2>
+        <h2>Cadastre-se Aqui Para o Sorteio</h2>
         <div class="cadastro">
             <form id="cadastro-form" action="https://formspree.io/f/xeolddja" method="POST">
                 <label for="nome">Nome Completo</label>
@@ -934,9 +1150,24 @@ O Espaço é mais do que um projeto de arquitetura — é um convite para sentir
                 <input id="profissao" type="text" name="profissao" placeholder="Digite sua profissão">
                 <label for="mensagem">Mensagem (opcional)</label>
                 <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem"></textarea>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="aviso-privacidade" name="aviso-privacidade" required>
+                    <label for="aviso-privacidade">Aviso de Privacidade: Seus dados pessoais serão utilizados para sua participação no sorteio e para envio de materiais e ofertas/publicidade relacionadas. Não compartilharemos suas informações com terceiros. Você pode solicitar a exclusão ou alteração dos seus dados a qualquer momento, conforme a LGPD (Lei nº 13.709/2018). Li e aceito o uso dos meus dados pessoais para sorteio, envio de materiais e publicidade, conforme descrito acima.</label>
+                </div>
                 <button type="submit">Enviar</button>
             </form>
             <div id="form-message" class="form-message"></div>
+        </div>
+    </section>
+     </section>
+    <!-- Galeria -->
+    <section id="galeria" class="section">
+        <h2>Veja Suas Fotos Aqui</h2>
+        <div class="galeria-grid">
+            <a href="https://www.google.com">Drive de fotos</a>
+        </div>
+        <div class="lightbox">
+            <img src="" alt="Lightbox Image">
         </div>
     </section>
     <!-- Mapa -->
